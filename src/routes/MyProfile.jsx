@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function MyProfile() {
   return (
@@ -6,7 +6,7 @@ function MyProfile() {
       <h1>My profile</h1>
       <h3>Under development</h3>
     </div>
-  )
+  );
 }
 
-export default MyProfile
+export default MyProfile;

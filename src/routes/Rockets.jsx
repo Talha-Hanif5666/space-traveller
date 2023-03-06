@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Rockets() {
   return (
@@ -6,7 +6,7 @@ function Rockets() {
       <h1>Rockets</h1>
       <h3>Under development</h3>
     </div>
-  )
+  );
 }
 
-export default Rockets
+export default Rockets;
