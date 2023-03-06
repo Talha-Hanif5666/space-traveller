@@ -21,13 +21,13 @@ function BasicExample() {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto" as='ul'>
             <Nav.Item as="li"  className='mx-2'>
-              <Link to="/books">Rockets</Link>
+              <Link to="/rockets">Rockets</Link>
             </Nav.Item>
             <Nav.Item as="li" className='mx-2'>
-              <Link to="/books">Missions</Link>
+              <Link to="/home">Missions</Link>
             </Nav.Item>
             <Nav.Item as="li" className='mx-2'>
-              <Link to="/books">My Profile</Link>
+              <Link to="/my-profile">My Profile</Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
