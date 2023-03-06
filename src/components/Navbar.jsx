@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/planet.png';
 
 function BasicExample() {
@@ -19,15 +19,15 @@ function BasicExample() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
-          <Nav className="ms-auto" as="ul">
+          <Nav className="ms-auto" as="ul" variant="pills">
             <Nav.Item as="li" className="mx-2">
-              <Link to="/rockets">Rockets</Link>
+              <NavLink to="/rockets" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black' })}>Rockets</NavLink>
             </Nav.Item>
             <Nav.Item as="li" className="mx-2">
-              <Link to="/home">Missions</Link>
+              <NavLink to="/missions" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black' })}>Missions</NavLink>
             </Nav.Item>
             <Nav.Item as="li" className="mx-2">
-              <Link to="/my-profile">My Profile</Link>
+              <NavLink to="/my-profile" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black' })}>My Profile</NavLink>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
