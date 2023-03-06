@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
@@ -19,7 +20,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d dist",
+    "css-linter": "npx stylelint \"**/*.{css,scss}\"",
+    "css-linter-fix": "npx stylelint \"**/*.{css,scss}\" --fix",
+    "js-linter": "npx eslint \"**/*.{js,jsx}\"",
+    "js-linter-fix": "npx eslint \"**/*.{js,jsx}\" --fix"
   },
   "eslintConfig": {
     "extends": [
