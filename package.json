@@ -1,6 +1,7 @@
 {
   "name": "space-traveller",
   "version": "0.1.0",
+  "homepage": "https://github.com/Talha-Hanif5666/space-traveller/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
