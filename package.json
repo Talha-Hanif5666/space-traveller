@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "css-linter": "npx stylelint \"**/*.{css,scss}\"",
     "css-linter-fix": "npx stylelint \"**/*.{css,scss}\" --fix",
     "js-linter": "npx eslint \"**/*.{js,jsx}\"",
