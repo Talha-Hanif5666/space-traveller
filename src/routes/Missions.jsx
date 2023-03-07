@@ -14,7 +14,7 @@ const Missions = () => {
 
   return (
     <div id="spacing">
-      <h1>MISSIONS</h1>
+      <h1 className="mission-head">MISSIONS</h1>
       {mission.loading && <h1>loading....</h1>}
       {!mission.loading && mission.error ? (
         <div>
