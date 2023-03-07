@@ -3,7 +3,7 @@ import { Button, Stack } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 
 const MissionTable = () => {
-  const table = useSelector((state) => state);
+  const table = useSelector((state) => state.missions);
 
   return (
     <Table striped bordered hover id="tablespace">
@@ -18,7 +18,7 @@ const MissionTable = () => {
         {table.missions.map((mission) => (
           <tr key={mission.id}>
             <td>{mission.name}</td>
-            <td>{mission.descrption}</td>
+            <td>{mission.description}</td>
             <td>
               <Stack direction="horizontal" gap={3}>
                 <Button variant="secondary">Not A Member</Button>

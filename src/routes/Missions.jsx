@@ -2,10 +2,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchMissions } from '../redux/missions/missionsSlice';
 import MissionTable from '../components/MissionTable/MissionTable';
-import '../App.css';
 
 const Missions = () => {
-  const mission = useSelector((state) => state);
+  const mission = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,7 +14,7 @@ const Missions = () => {
   return (
     <div id="spacing">
       <h1 className="mission-head">MISSIONS</h1>
-      {mission.loading && <h1>loading....</h1>}
+      {mission.loading && <h1>Loading Missions....</h1>}
       {!mission.loading && mission.error ? (
         <div>
           Error:
