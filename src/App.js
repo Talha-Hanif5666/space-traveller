@@ -7,15 +7,15 @@ import NotFound from './routes/NotFound';
 
 function App() {
   return (
-    <>
-      <Layout />
-      <Routes>
-        <Route path="/rockets" element={<Rockets />} />
-        <Route path="/missions" element={<Missions />} />
-        <Route path="/my-profile" element={<MyProfile />} />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Rockets />} />
+        <Route path="rockets" element={<Rockets />} />
+        <Route path="my-profile" element={<MyProfile />} />
+        <Route path="missions" element={<Missions />} />
         <Route path="*" element={<NotFound />} />
-      </Routes>
-    </>
+      </Route>
+    </Routes>
   );
 }
 
