@@ -4,7 +4,8 @@ import { Outlet } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from './Navbar';
 
-function Layout({ error, loading }) {
+function Layout({ status }) {
+  const { error, loading } = status;
   return (
     <>
       <Navbar error={error} loading={loading} />
@@ -18,6 +19,8 @@ function Layout({ error, loading }) {
 export default Layout;
 
 Layout.propTypes = {
-  error: PropTypes.string.isRequired,
-  loading: PropTypes.bool.isRequired,
+  status: PropTypes.objectOf(PropTypes.shape({
+    error: PropTypes.string.isRequired,
+    loading: PropTypes.bool.isRequired,
+  })).isRequired,
 };
