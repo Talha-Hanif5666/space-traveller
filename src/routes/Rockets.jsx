@@ -1,16 +1,18 @@
 import React from 'react';
-import { Badge, Button } from 'react-bootstrap';
-import planet from '../assets/planet.png'
+import Rocket from '../components/Rocket';
 // import store from '../redux/store';
 // import { getRockets } from '../redux/rockets/rocketsSlice';
 
 
 // store.dispatch(getRockets())
-function Rockets() {
+function Rockets({rockets}) {
+  console.log('At route Rockets');
+  console.log(rockets);
   return (
     <div>
       <ul className='list-group list-group-flush'>
-        <li className='list-group-item'>
+        {rockets.map((rocket)=> <Rocket key={rocket.id} rocket={rocket}/>) }
+        {/* <li className='list-group-item'>
           <div className="card mb-3">
             <div className="row g-0">
               <div className="col-md-4">
@@ -43,7 +45,7 @@ function Rockets() {
               </div>
             </div>
           </div>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
