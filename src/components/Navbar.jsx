@@ -16,6 +16,7 @@ function BasicExample() {
             className="d-inline-block align-top"
             alt="React Bootstrap logo"
           />
+          <span style={{ fontWeight: 'bold', fontSize: '30px', marginLeft: '10px' }}>Space Traveler&apos;s Hub</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
