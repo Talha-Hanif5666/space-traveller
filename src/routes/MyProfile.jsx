@@ -13,7 +13,7 @@ const MyProfile = () => {
           <tbody>
             {display.map((mission) => (
               <tr key={mission.id}>
-                <td>{mission.name}</td>
+                <td style={{ fontWeight: 'bold' }}>{mission.name}</td>
               </tr>
             ))}
           </tbody>
