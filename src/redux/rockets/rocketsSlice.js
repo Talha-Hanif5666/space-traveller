@@ -6,10 +6,11 @@ const initialState = {
     loading: false,
     error: '',
   },
-
+  myRockets: [],
 };
 
 const rocketsURL = 'https://api.spacexdata.com/v4/rockets';
+
 
 const returnStatus = (type, state, action) => {
   const newState = { ...state };
@@ -40,6 +41,7 @@ export const getRockets = createAsyncThunk('rockets/get', async () => fetch(rock
       name: rocket.name,
       img: rocket.flickr_images[0],
       desc: rocket.description,
+      booked: false,
     }
   )))
   .catch((error) => error));
@@ -48,9 +50,23 @@ const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    fetchRockets: (state) => {
-      const newState = { ...state };
-      return newState;
+    booking: (state, action) => {
+      const id = action.payload;
+      const rocketArray = state.rocketList.map((rocket) => {
+        if (rocket.id === id) {
+          if (rocket.booked) {
+            return {...rocket,booked: false}
+          } else {
+            return {...rocket, booked:true}
+          }
+        } else {
+          return rocket
+        }
+      })
+      console.log(rocketArray);
+      const bookedRockets = rocketArray.filter((rocket)=> rocket.booked === true)
+      console.log(bookedRockets);
+      return {...state, rocketList: rocketArray, myRockets: bookedRockets};
     },
   },
   extraReducers: (builder) => {
@@ -69,6 +85,6 @@ const rocketsSlice = createSlice({
   },
 });
 
-export const { checkStatus } = rocketsSlice.actions;
+export const { booking } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
