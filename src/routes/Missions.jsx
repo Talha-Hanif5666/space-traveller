@@ -1,12 +1,29 @@
-import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchMissions } from '../redux/missions/missionsSlice';
+import MissionTable from '../components/MissionTable/MissionTable';
 
-function Missions() {
+const Missions = () => {
+  const mission = useSelector((state) => state.missions);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, [dispatch]);
+
   return (
-    <div>
-      <h1>My Missions</h1>
-      <h3>Under Construction</h3>
+    <div id="spacing">
+      <h1 className="mission-head">MISSIONS</h1>
+      {mission.loading && <h1>Loading Missions....</h1>}
+      {!mission.loading && mission.error ? (
+        <div>
+          Error:
+          {mission.error}
+        </div>
+      ) : null}
+      {!mission.loading && mission.missions.length ? <MissionTable /> : null}
     </div>
   );
-}
+};
 
 export default Missions;
