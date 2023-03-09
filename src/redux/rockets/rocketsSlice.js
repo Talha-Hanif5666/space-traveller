@@ -11,7 +11,6 @@ const initialState = {
 
 const rocketsURL = 'https://api.spacexdata.com/v4/rockets';
 
-
 const returnStatus = (type, state, action) => {
   const newState = { ...state };
   switch (type) {
@@ -55,18 +54,14 @@ const rocketsSlice = createSlice({
       const rocketArray = state.rocketList.map((rocket) => {
         if (rocket.id === id) {
           if (rocket.booked) {
-            return {...rocket,booked: false}
-          } else {
-            return {...rocket, booked:true}
+            return { ...rocket, booked: false };
           }
-        } else {
-          return rocket
+          return { ...rocket, booked: true };
         }
-      })
-      console.log(rocketArray);
-      const bookedRockets = rocketArray.filter((rocket)=> rocket.booked === true)
-      console.log(bookedRockets);
-      return {...state, rocketList: rocketArray, myRockets: bookedRockets};
+        return rocket;
+      });
+      const bookedRockets = rocketArray.filter((rocket) => rocket.booked === true);
+      return { ...state, rocketList: rocketArray, myRockets: bookedRockets };
     },
   },
   extraReducers: (builder) => {

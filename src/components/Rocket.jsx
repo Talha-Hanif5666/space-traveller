@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Badge, Button } from 'react-bootstrap';
-import { booking } from '../redux/rockets/rocketsSlice';
 import { useDispatch } from 'react-redux';
+import { booking } from '../redux/rockets/rocketsSlice';
 
 function Rocket({ rocket }) {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
     <li className="list-group-item">
       <div className="card mb-3">

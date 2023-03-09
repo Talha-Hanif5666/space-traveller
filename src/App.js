@@ -13,7 +13,7 @@ function App() {
       <Route path="/" element={<Layout status={status} />}>
         <Route index element={<Rockets rockets={rocketList} />} />
         <Route path="rockets" element={<Rockets rockets={rocketList} />} />
-        <Route path="my-profile" element={<MyProfile myRockets={myRockets}/>} />
+        <Route path="my-profile" element={<MyProfile myRockets={myRockets} />} />
         <Route path="missions" element={<Missions />} />
         <Route path="*" element={<NotFound />} />
       </Route>
