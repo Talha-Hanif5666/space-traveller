@@ -18,7 +18,7 @@ function BaseNavbar({ error, loading }) {
             alt="React Bootstrap logo"
           />
         </Navbar.Brand>
-        {error ? <span>{error}</span> : ''}
+        {error ? <span className="me-2">{error}</span> : ''}
         {loading ? (
           <div className="spinner-border text-primary" role="status">
             <span className="visually-hidden">Loading...</span>

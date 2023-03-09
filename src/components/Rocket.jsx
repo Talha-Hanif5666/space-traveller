@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Badge, Button } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { booking } from '../redux/rockets/rocketsSlice';
 
-function Rocket({ rocket, booked }) {
+function Rocket({ rocket }) {
+  const dispatch = useDispatch();
   return (
     <li className="list-group-item">
       <div className="card mb-3">
@@ -14,10 +17,10 @@ function Rocket({ rocket, booked }) {
             <div className="card-body">
               <h5 className="card-title">{rocket.name}</h5>
               <p className="card-text">
-                <Badge bg={booked ? 'secondary' : 'primary'} pill>{booked ? 'Reserved' : 'Available'}</Badge>
+                <Badge bg={rocket.booked ? 'secondary' : 'primary'} pill>{rocket.booked ? 'Reserved' : 'Available'}</Badge>
                 {rocket.desc}
               </p>
-              <Button variant={booked ? 'secondary' : 'primary'}>{booked ? 'Cancel reservation' : 'Reserve rocket'}</Button>
+              <Button onClick={() => dispatch(booking(rocket.id))} variant={rocket.booked ? 'secondary' : 'primary'}>{rocket.booked ? 'Cancel reservation' : 'Reserve rocket'}</Button>
             </div>
           </div>
         </div>
@@ -28,16 +31,12 @@ function Rocket({ rocket, booked }) {
 
 export default Rocket;
 
-Rocket.defaultProps = {
-  booked: false,
-};
-
 Rocket.propTypes = {
   rocket: PropTypes.objectOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
+    booked: PropTypes.bool.isRequired,
   })).isRequired,
-  booked: PropTypes.bool,
 };
