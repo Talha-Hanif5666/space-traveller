@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Outlet } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from './Navbar';
 
-function Layout() {
+function Layout({ error, loading }) {
   return (
     <>
-      <Navbar />
+      <Navbar error={error} loading={loading} />
       <Container>
         <Outlet />
       </Container>
@@ -15,3 +16,8 @@ function Layout() {
 }
 
 export default Layout;
+
+Layout.propTypes = {
+  error: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
+};
