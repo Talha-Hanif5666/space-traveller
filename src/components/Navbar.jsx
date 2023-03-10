@@ -19,10 +19,10 @@ function BaseNavbar({ error, loading }) {
           />
           <span style={{ fontWeight: 'bold', fontSize: '30px', marginLeft: '10px' }}>Space Traveler&apos;s Hub</span>
         </Navbar.Brand>
-        {error ? <span className="me-2">{error}</span> : ''}
+        {error ? <span className="me-2" role="log">{error}</span> : ''}
         {loading ? (
-          <div className="spinner-border text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
+          <div className="spinner-border text-primary">
+            <span role="status" className="visually-hidden">Loading...</span>
           </div>
         ) : ''}
         <Navbar.Toggle aria-controls="navbar-nav" />
