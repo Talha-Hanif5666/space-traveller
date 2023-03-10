@@ -1,12 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Rocket from '../components/Rocket';
 
-function Rockets() {
+import store from '../redux/store';
+import { getRockets } from '../redux/rockets/rocketsSlice';
+
+// store.dispatch(getRockets())
+store.dispatch(getRockets());
+
+function Rockets({ rockets }) {
   return (
     <div>
-      <h1>Rockets</h1>
-      <h3>Under development</h3>
+      <ul className="list-group list-group-flush">
+        {rockets.map((rocket) => <Rocket key={rocket.id} rocket={rocket} />) }
+      </ul>
     </div>
   );
 }
 
 export default Rockets;
+
+Rockets.propTypes = {
+  rockets: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    booked: PropTypes.bool.isRequired,
+  })).isRequired,
+};

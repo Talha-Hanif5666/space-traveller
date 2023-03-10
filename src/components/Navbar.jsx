@@ -1,10 +1,11 @@
 import Container from 'react-bootstrap/Container';
+import PropTypes from 'prop-types';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/planet.png';
 
-function BasicExample() {
+function BaseNavbar({ error, loading }) {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -18,6 +19,12 @@ function BasicExample() {
           />
           <span style={{ fontWeight: 'bold', fontSize: '30px', marginLeft: '10px' }}>Space Traveler&apos;s Hub</span>
         </Navbar.Brand>
+        {error ? <span className="me-2">{error}</span> : ''}
+        {loading ? (
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        ) : ''}
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto" as="ul" variant="pills">
@@ -37,4 +44,9 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default BaseNavbar;
+
+BaseNavbar.propTypes = {
+  error: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
+};
