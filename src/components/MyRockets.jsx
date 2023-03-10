@@ -7,7 +7,7 @@ function MyRockets({ myRockets }) {
   if (myRockets.length !== 0) {
     content = (
       <ListGroup>
-        {myRockets.map((rocket) => <ListGroup.Item key={rocket.id}>{rocket.name}</ListGroup.Item>)}
+        {myRockets.map((rocket) => <ListGroup.Item key={rocket.id} className="fw-bold">{rocket.name}</ListGroup.Item>)}
       </ListGroup>
     );
   } else {
@@ -15,7 +15,7 @@ function MyRockets({ myRockets }) {
   }
   return (
     <>
-      <h3>Rockets booked</h3>
+      <h2>Rockets booked</h2>
       {content}
     </>
   );
