@@ -1,7 +1,6 @@
 {
   "name": "space-traveller",
   "version": "0.1.0",
-  "homepage": "https://space-traveller.onrender.com/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
