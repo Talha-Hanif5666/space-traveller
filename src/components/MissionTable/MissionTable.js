@@ -32,11 +32,29 @@ const MissionTable = () => {
             <td>{mission.name}</td>
             <td>{mission.description}</td>
             <td>
-              <Stack direction="horizontal" gap={3}>
-                {!mission.reserved ? (<Button variant="secondary">Not A Member</Button>
-                ) : (<Button variant="info">Active Member</Button>)}
-                {!mission.reserved ? (<Button id={mission.id} onClick={joinMissionHandler} variant="light">Join Mission</Button>
-                ) : (<Button id={mission.id} onClick={leaveMissionHandler} variant="danger">Leave Mission</Button>)}
+              <Stack direction="horizontal" margintop="50%" gap={3}>
+                {!mission.reserved ? (
+                  <Button
+                    style={{
+                      width: '125px', fontSize: '12px', margintop: '50%', fontWeight: 'bold',
+                    }}
+                    variant="secondary"
+                  >
+                    NOT A MEMBER
+                  </Button>
+                ) : (<Button style={{ width: '125px', fontSize: '12px', fontWeight: 'bold' }} variant="info">ACTIVE MEMBER</Button>)}
+                {!mission.reserved ? (
+                  <Button
+                    style={{
+                      width: '125px', fontSize: '12px', fontWeight: 'bold', border: '1px solid gray',
+                    }}
+                    id={mission.id}
+                    onClick={joinMissionHandler}
+                    variant="light"
+                  >
+                    JOIN MISSION
+                  </Button>
+                ) : (<Button style={{ width: '125px', fontSize: '12px', fontWeight: 'bold' }} id={mission.id} onClick={leaveMissionHandler} variant="danger">LEAVE MISSION</Button>)}
               </Stack>
             </td>
           </tr>
