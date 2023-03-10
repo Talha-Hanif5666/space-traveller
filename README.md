@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# 📗 Table of Contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Space Traveller ](#-space-traveller-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Usage](#usage)
+  - [👤 Authors ](#-authors-)
+  - [✅ Current Features ](#-current-features-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-## Available Scripts
+# 📖 Space Traveller <a name="about-project"></a>
 
-In the project directory, you can run:
+**Space Traveller**, is a web application built using React that allows users to make bookings for rockets and missions by Spacex.
 
-### `npm start`
+## 🛠 Built With <a name="built-with"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Tech Stack <a name="tech-stack"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+HTML | JS | GIT
 
-### `npm test`
+Snowpack | Tailwind | React | GH pages | Jest
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-### `npm run build`
+On Render
+- [Live Render demo](https://space-traveller.onrender.com)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💻 Getting Started <a name="getting-started"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get a local copy up and running, follow these steps.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+In order to run this project you need:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+GIT | A code editor | A web browser
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone this repository to your desired folder:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  `git clone git@github.com:Talha-Hanif5666/space-traveller.git`
 
-## Learn More
+### Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run the project, use the command
+`npm run start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run the tests, use the command
+`npm run test`
 
-### Code Splitting
+## 👤 Authors <a name="author"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Talha Hanif**
 
-### Analyzing the Bundle Size
+- GitHub: [@mudasiri](https://github.com/Talha-Hanif5666)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Javier Hernandez**
 
-### Making a Progressive Web App
+- GitHub: [@wickathou](https://github.com/wickathou)
+- LinkedIn: [@javierjhm](https://linkedin.com/in/javierjhm)
+- Portfolio: [End Design Co.](https://works.enddesign.co/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## ✅ Current Features <a name="current-features"></a>
 
-### Advanced Configuration
+- [Done] **[Visual interface for rocket/mission from Spacex]**
+- [Done] **[Booking system for rockets and missions]**
+- [Done] **[Separate webapp views]**
+- [Done] **[Unit test with Jest and Testing Library]**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔭 Future Features <a name="future-features"></a>
 
-### Deployment
+- [ ] **[Improve visual design]**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contributing <a name="contributing"></a>
 
-### `npm run build` fails to minify
+Feel free to check the [issues page](https://github.com/Talha-Hanif5666/space-traveller/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project feel free to fork it or star it
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+Thanks Microverse, learn how to code > [Join Microverse](https://www.microverse.org/?grsf=9m3hq6)
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
