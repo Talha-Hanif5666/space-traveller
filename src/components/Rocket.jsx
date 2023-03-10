@@ -17,10 +17,10 @@ function Rocket({ rocket }) {
             <div className="card-body">
               <h5 className="card-title">{rocket.name}</h5>
               <p className="card-text">
-                <Badge bg={rocket.booked ? 'secondary' : 'primary'} pill>{rocket.booked ? 'Reserved' : 'Available'}</Badge>
+                <Badge role="status" bg={rocket.booked ? 'secondary' : 'primary'} pill>{rocket.booked ? 'Reserved' : 'Available'}</Badge>
                 {rocket.desc}
               </p>
-              <Button onClick={() => dispatch(booking(rocket.id))} variant={rocket.booked ? 'secondary' : 'primary'}>{rocket.booked ? 'Cancel reservation' : 'Reserve rocket'}</Button>
+              <Button role="button" onClick={() => dispatch(booking(rocket.id))} variant={rocket.booked ? 'secondary' : 'primary'}>{rocket.booked ? 'Cancel reservation' : 'Reserve rocket'}</Button>
             </div>
           </div>
         </div>

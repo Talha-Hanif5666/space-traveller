@@ -32,7 +32,7 @@ Snowpack | Tailwind | React | GH pages | Jest
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 On Render
-- [Live Render demo](https://space-traveller.onrender.com)
+- [Live Render demo](https://space-traveller.onrender.com/space-traveller/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 

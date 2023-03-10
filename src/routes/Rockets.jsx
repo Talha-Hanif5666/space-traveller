@@ -5,7 +5,6 @@ import Rocket from '../components/Rocket';
 import store from '../redux/store';
 import { getRockets } from '../redux/rockets/rocketsSlice';
 
-// store.dispatch(getRockets())
 store.dispatch(getRockets());
 
 function Rockets({ rockets }) {

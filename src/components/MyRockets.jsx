@@ -11,7 +11,7 @@ function MyRockets({ myRockets }) {
       </ListGroup>
     );
   } else {
-    content = <p>No rockets yet</p>;
+    content = <p role="status">No rockets yet</p>;
   }
   return (
     <>

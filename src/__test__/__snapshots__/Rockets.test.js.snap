@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Mission test to render all missions:  1`] = `
+exports[`Rockets test to render all rockets:  1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -43,6 +43,7 @@ Object {
                     >
                       <span
                         class="badge rounded-pill bg-primary"
+                        role="status"
                       >
                         Available
                       </span>
@@ -50,6 +51,7 @@ Object {
                     </p>
                     <button
                       class="btn btn-primary"
+                      role="button"
                       type="button"
                     >
                       Reserve rocket
@@ -93,6 +95,7 @@ Object {
                     >
                       <span
                         class="badge rounded-pill bg-primary"
+                        role="status"
                       >
                         Available
                       </span>
@@ -100,6 +103,7 @@ Object {
                     </p>
                     <button
                       class="btn btn-primary"
+                      role="button"
                       type="button"
                     >
                       Reserve rocket
@@ -152,6 +156,7 @@ Object {
                   >
                     <span
                       class="badge rounded-pill bg-primary"
+                      role="status"
                     >
                       Available
                     </span>
@@ -159,6 +164,7 @@ Object {
                   </p>
                   <button
                     class="btn btn-primary"
+                    role="button"
                     type="button"
                   >
                     Reserve rocket
@@ -202,6 +208,7 @@ Object {
                   >
                     <span
                       class="badge rounded-pill bg-primary"
+                      role="status"
                     >
                       Available
                     </span>
@@ -209,6 +216,7 @@ Object {
                   </p>
                   <button
                     class="btn btn-primary"
+                    role="button"
                     type="button"
                   >
                     Reserve rocket
