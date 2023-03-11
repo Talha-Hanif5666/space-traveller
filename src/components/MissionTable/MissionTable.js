@@ -23,23 +23,23 @@ const Mission = (props) => {
         <td className="button-status">
           <Button
             style={{
-              width: '125px', fontSize: '12px', margintop: '50%', fontWeight: 'bold',
+              width: '125px', fontSize: '12px', margintop: '50%', fontWeight: 'bold', backgroundColor: isReserved ? 'blue' : 'grey',
             }}
             className={isReserved ? 'active-button' : 'status'}
           >
-            {isReserved ? 'Active Member' : 'NOT A MEMBER'}
+            {isReserved ? 'Active Member' : 'Not a Member'}
           </Button>
         </td>
         <td className="button-join">
           <Button
             style={{
-              width: '125px', fontSize: '12px', margintop: '50%', fontWeight: 'bold',
+              width: '125px', fontSize: '12px', margintop: '50%', fontWeight: 'bold', backgroundColor: isReserved ? 'red' : 'grey',
             }}
             type="button"
             className={isReserved ? 'leave' : 'join'}
             onClick={handleJoining}
           >
-            {isReserved ? 'Leave Mission' : 'Join Mission'}
+            {isReserved ? 'Leave Mission ' : 'Join Mission'}
           </Button>
 
         </td>
