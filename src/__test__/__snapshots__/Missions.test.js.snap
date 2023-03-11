@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<tr>
+  <td
+    style={
+      Object {
+        "fontWeight": "bold",
+      }
+    }
+  />
+  <td />
+  <td
+    className="button-status"
+  >
+    <button
+      className="status btn btn-primary"
+      disabled={false}
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "fontSize": "12px",
+          "fontWeight": "bold",
+          "margintop": "50%",
+          "width": "125px",
+        }
+      }
+      type="button"
+    >
+      Not a Member
+    </button>
+  </td>
+  <td
+    className="button-join"
+  >
+    <button
+      className="join btn btn-primary"
+      disabled={false}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "fontSize": "12px",
+          "fontWeight": "bold",
+          "margintop": "50%",
+          "width": "125px",
+        }
+      }
+      type="button"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;
