@@ -13,18 +13,37 @@ exports[`renders correctly 1`] = `
   <td
     className="button-status"
   >
-    <div
-      className="status"
+    <button
+      className="status btn btn-primary"
+      disabled={false}
+      style={
+        Object {
+          "fontSize": "12px",
+          "fontWeight": "bold",
+          "margintop": "50%",
+          "width": "125px",
+        }
+      }
+      type="button"
     >
       NOT A MEMBER
-    </div>
+    </button>
   </td>
   <td
     className="button-join"
   >
     <button
-      className="join"
+      className="join btn btn-primary"
+      disabled={false}
       onClick={[Function]}
+      style={
+        Object {
+          "fontSize": "12px",
+          "fontWeight": "bold",
+          "margintop": "50%",
+          "width": "125px",
+        }
+      }
       type="button"
     >
       Join Mission

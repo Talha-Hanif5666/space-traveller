@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Button } from 'react-bootstrap';
 import { updateMission } from '../../redux/missions/missionsSlice';
 
 const Mission = (props) => {
@@ -20,20 +21,26 @@ const Mission = (props) => {
           {description}
         </td>
         <td className="button-status">
-          <div
+          <Button
+            style={{
+              width: '125px', fontSize: '12px', margintop: '50%', fontWeight: 'bold',
+            }}
             className={isReserved ? 'active-button' : 'status'}
           >
             {isReserved ? 'Active Member' : 'NOT A MEMBER'}
-          </div>
+          </Button>
         </td>
         <td className="button-join">
-          <button
+          <Button
+            style={{
+              width: '125px', fontSize: '12px', margintop: '50%', fontWeight: 'bold',
+            }}
             type="button"
             className={isReserved ? 'leave' : 'join'}
             onClick={handleJoining}
           >
             {isReserved ? 'Leave Mission' : 'Join Mission'}
-          </button>
+          </Button>
 
         </td>
       </tr>
