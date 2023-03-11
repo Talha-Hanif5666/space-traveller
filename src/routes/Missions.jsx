@@ -1,29 +1,42 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchMissions } from '../redux/missions/missionsSlice';
-import MissionTable from '../components/MissionTable/MissionTable';
+import React, { useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useDispatch, useSelector } from 'react-redux';
+import Table from 'react-bootstrap/Table';
+import Mission from '../components/MissionTable/MissionTable';
+import { retriveMissions } from '../redux/missions/missionsSlice';
 
-const Missions = () => {
-  const mission = useSelector((state) => state.missions);
+function Missions() {
   const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(fetchMissions());
+    dispatch(retriveMissions());
   }, [dispatch]);
-
+  const missions = useSelector((state) => state.missionsReducer);
+  const renderMissions = (missionsData) => missionsData.map((mission) => (
+    <Mission
+      id={mission.id}
+      key={mission.id}
+      name={mission.name}
+      description={mission.description}
+      isReserved={mission.isReserved}
+    />
+  ));
   return (
-    <div id="spacing">
-      <h1 className="mission-head">MISSIONS</h1>
-      {mission.loading && <h1>Loading Missions....</h1>}
-      {!mission.loading && mission.error ? (
-        <div>
-          Error:
-          {mission.error}
-        </div>
-      ) : null}
-      {!mission.loading && mission.missions.length ? <MissionTable /> : null}
+    <div className="table-container">
+      <Table striped className="main-table my-5">
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          {renderMissions(missions)}
+        </tbody>
+      </Table>
     </div>
   );
-};
+}
 
 export default Missions;

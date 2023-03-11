@@ -60,9 +60,11 @@ To run the tests, use the command
 
 ## 👤 Authors <a name="author"></a>
 
-**Talha Hanif**
+**Muhammad Talha Hanif**
 
-- GitHub: [@mudasiri](https://github.com/Talha-Hanif5666)
+- GitHub: [@githubhandle](https://github.com/Talha-Hanif5666)
+- Twitter: [@twitterhandle](https://twitter.com/TalhaHa45039660?t=R4git6jFgsysI4xPxmN-ag&s=09)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/muhammad-talha-hanif-6b1355116)
 
 **Javier Hernandez**
 

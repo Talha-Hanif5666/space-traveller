@@ -1,19 +1,18 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import renderer from 'react-test-renderer';
+import Mission from '../components/MissionTable/MissionTable';
 import store from '../redux/store';
-import Missions from '../routes/Missions';
+import '@testing-library/jest-dom/extend-expect';
 
-describe('Mission test', () => {
-  test('to render all missions: ', () => {
-    const missions = render(
+it('renders correctly', () => {
+  const tree = renderer
+    .create(
       <Provider store={store}>
         <BrowserRouter>
-          <Missions />
+          <Mission />
         </BrowserRouter>
       </Provider>,
-    );
-    expect(missions).toMatchSnapshot();
-  });
+    ).toJSON();
+  expect(tree).toMatchSnapshot();
 });
